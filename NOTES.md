@@ -73,7 +73,7 @@ export default buildConfig({
 `src/lib/server/collections/Users.ts`
 
 ```ts
-import { CollectionConfig } from 'payload/types';
+import type { CollectionConfig } from 'payload/types';
 
 const Users: CollectionConfig = {
   slug: 'users',
@@ -142,18 +142,20 @@ $ pnpm dev
 > my-app@0.0.1 dev /mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup
 > cross-env PAYLOAD_CONFIG_PATH=src/lib/server/payload.config.ts vite dev
 
-  VITE v4.3.9  ready in 745 ms
+
+
+  VITE v4.3.9  ready in 867 ms
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
   ➜  press h to show help
-11:56:34 PM [vite] page reload src/lib/server/payload.ts
-11:56:34 PM [vite] page reload src/lib/server/index.ts
-11:56:34 PM [vite] page reload src/hooks.server.ts
-11:56:34 PM [vite] page reload src/app.html
-[22:56:34] INFO (payload): Connected to MongoDB server successfully!
-[22:56:34] INFO (payload): Starting Payload...
-11:56:35 PM [vite] Error when evaluating SSR module /src/lib/server/payload.ts:
+4:37:59 AM [vite] page reload src/lib/server/payload.ts
+4:37:59 AM [vite] page reload src/lib/server/index.ts
+4:37:59 AM [vite] page reload src/hooks.server.ts
+4:37:59 AM [vite] page reload src/app.html
+[03:37:59] INFO (payload): Connected to MongoDB server successfully!
+[03:37:59] INFO (payload): Starting Payload...
+4:37:59 AM [vite] Error when evaluating SSR module /src/lib/server/payload.ts:
 |- /mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/src/lib/server/payload.config.ts:1
 import { buildConfig } from 'payload/config';
 ^^^^^^
@@ -168,4 +170,70 @@ SyntaxError: Cannot use import statement outside a module
     at Module.require (node:internal/modules/cjs/loader:1141:19)
     at require (node:internal/modules/cjs/helpers:110:18)
     at loadConfig (/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/node_modules/.pnpm/payload@1.9.0_typescript@5.1.3/node_modules/payload/dist/config/load.js:21:27)
+    at BasePayload.init (/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/node_modules/.pnpm/payload@1.9.0_typescript@5.1.3/node_modules/payload/dist/payload.js:187:33)
+
+4:37:59 AM [vite] Error when evaluating SSR module /src/lib/server/index.ts: failed to import "/src/lib/server/payload.ts"
+|- /mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/src/lib/server/payload.config.ts:1
+import { buildConfig } from 'payload/config';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1176:20)
+    at Module._compile (node:internal/modules/cjs/loader:1218:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+    at Module.load (node:internal/modules/cjs/loader:1117:32)
+    at Module._load (node:internal/modules/cjs/loader:958:12)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at loadConfig (/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/node_modules/.pnpm/payload@1.9.0_typescript@5.1.3/node_modules/payload/dist/config/load.js:21:27)
+    at BasePayload.init (/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/node_modules/.pnpm/payload@1.9.0_typescript@5.1.3/node_modules/payload/dist/payload.js:187:33)
+
+4:37:59 AM [vite] Error when evaluating SSR module /src/hooks.server.ts: failed to import "/src/lib/server/index.ts"
+|- /mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/src/lib/server/payload.config.ts:1
+import { buildConfig } from 'payload/config';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1176:20)
+    at Module._compile (node:internal/modules/cjs/loader:1218:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+    at Module.load (node:internal/modules/cjs/loader:1117:32)
+    at Module._load (node:internal/modules/cjs/loader:958:12)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at loadConfig (/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/node_modules/.pnpm/payload@1.9.0_typescript@5.1.3/node_modules/payload/dist/config/load.js:21:27)
+    at BasePayload.init (/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/node_modules/.pnpm/payload@1.9.0_typescript@5.1.3/node_modules/payload/dist/payload.js:187:33)
+
+/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/src/lib/server/payload.config.ts:1
+import { buildConfig } from 'payload/config';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1176:20)
+    at Module._compile (node:internal/modules/cjs/loader:1218:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+    at Module.load (node:internal/modules/cjs/loader:1117:32)
+    at Module._load (node:internal/modules/cjs/loader:958:12)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at loadConfig (/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/node_modules/.pnpm/payload@1.9.0_typescript@5.1.3/node_modules/payload/dist/config/load.js:21:27)
+    at BasePayload.init (/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/node_modules/.pnpm/payload@1.9.0_typescript@5.1.3/node_modules/payload/dist/payload.js:187:33)
+/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/src/lib/server/payload.config.ts:1
+import { buildConfig } from 'payload/config';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1176:20)
+    at Module._compile (node:internal/modules/cjs/loader:1218:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+    at Module.load (node:internal/modules/cjs/loader:1117:32)
+    at Module._load (node:internal/modules/cjs/loader:958:12)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at loadConfig (/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/node_modules/.pnpm/payload@1.9.0_typescript@5.1.3/node_modules/payload/dist/config/load.js:21:27)
+    at BasePayload.init (/mnt/storage/Home/Documents/Development/Svelte/SvelteKitPayloadCmsLocalApiSetup/node_modules/.pnpm/payload@1.9.0_typescript@5.1.3/node_modules/payload/dist/payload.js:187:33)
 ```
