@@ -1,0 +1,5 @@
+2023-06-14-21-29.tgz  first version with required payload
+2023-06-14-21-47.tgz  first version with a call to users working, at last
+2023-06-14-22-38.tgz  first backup with hooks.server.ts working with import { payloadClient } from '$lib/server/payload';, but build keeps fail with Something went wrong installing the "sharp" module
+2023-06-14-23-07.tgz  leave hooks.server.ts without import { payloadClient } from '$lib/server/payload'; it will fails on pnpm build
+2023-09-11-20-49.tgz  start to finish clean project, before start to leave it in favour of a bun 1.0 starter
